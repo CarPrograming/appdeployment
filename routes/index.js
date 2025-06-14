@@ -45,8 +45,8 @@ const DataProject2 = `
 
 
 /* GET Contact page. */
-router.get('/contact', function(req, res, next) {
-  res.render('contact', { title: 'Contact Me' });
+router.get('/Contact', function(req, res, next) {
+  res.render('Contact', { title: 'Contact Me' });
 });
 
 module.exports = router;
