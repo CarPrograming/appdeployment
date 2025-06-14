@@ -1,0 +1,42 @@
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+
+    /* we set the div in one place in the center to show the image its moving but not the container*/
+    .parallaxDiv {
+      background-image: url('/images/banner.png'); 
+      height: 100vh;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      color: white;
+      text-align: center;
+      z-index: 1;
+    }
+
+    /* giving the div container a color black transparent and set it behing H1*/
+    .parallaxDiv::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6); 
+      z-index: -1;
+    }
+/* giving the h1 a color black transparent */
+    .parallaxDiv h1 {
+      font-size: 4vw;
+      padding: 20px 40px;
+      border-radius: 10px;
+      background-color: rgba(0, 0, 0, 0.4); 
+      max-width: 90%;
+    }
